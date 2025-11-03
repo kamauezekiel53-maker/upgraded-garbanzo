@@ -12,6 +12,7 @@
   --particle-color: rgba(168,85,247,0.2);
   --skill-bar-bg: #333;
   --skill-bar-fill: #a855f7;
+  --contact-icon-size: 24px;
 }
 
 /* ==============================
@@ -102,7 +103,7 @@ section {
    HERO SECTION
 ============================== */
 #hero {
-  min-height: calc(100vw * 0.25); /* 16:4 ratio for mobile, 16:9 for desktop */
+  min-height: calc(100vw * 0.25); /* 16:4 ratio for mobile */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -230,7 +231,7 @@ section {
 
 @keyframes fillBar {
   0% { width: 0%; }
-  100% { width: 80%; } /* example fill percentage */
+  100% { width: 80%; }
 }
 
 /* ==============================
@@ -299,6 +300,7 @@ section {
   border-radius: 20px;
   font-size: 0.8rem;
   margin-right: 5px;
+  display: inline-block;
 }
 
 /* ==============================
@@ -349,6 +351,22 @@ section {
   color: var(--text-muted);
   margin-top: 20px;
   font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.contact-info a {
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.contact-icon {
+  width: var(--contact-icon-size);
+  height: var(--contact-icon-size);
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
 }
 
 .footer-caption {
@@ -377,7 +395,7 @@ footer {
     flex-direction: column;
     align-items: center;
   }
-  
+
   #hero h1 {
     font-size: 2rem;
   }
