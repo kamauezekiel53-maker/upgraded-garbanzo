@@ -10,6 +10,8 @@
   --text-muted: #aaa;
   --btn-glow: rgba(168,85,247,0.6);
   --particle-color: rgba(168,85,247,0.2);
+  --skill-bar-bg: #333;
+  --skill-bar-fill: #a855f7;
 }
 
 /* ==============================
@@ -40,7 +42,6 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
   text-shadow: 0 0 6px var(--primary);
 }
 
@@ -101,7 +102,7 @@ section {
    HERO SECTION
 ============================== */
 #hero {
-  min-height: 100vh;
+  min-height: calc(100vw * 0.25); /* 16:4 ratio for mobile, 16:9 for desktop */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -148,6 +149,11 @@ section {
   animation: fadeInUp 1.5s ease forwards;
 }
 
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
 /* ==============================
    About Section
 ============================== */
@@ -188,20 +194,43 @@ section {
   list-style: none;
   margin-top: 10px;
   color: var(--text-muted);
+  text-align: left;
 }
 
 .skills li {
-  margin-bottom: 6px;
+  margin-bottom: 8px;
   opacity: 0;
   transform: translateY(10px);
   animation: skillFade 0.8s forwards;
-  animation-delay: 0.3s;
 }
 
-/* Skill fade-in when about section is in view */
 @keyframes skillFade {
   0% { opacity: 0; transform: translateY(10px); }
   100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ==============================
+   Skill Bars
+============================== */
+.skill-bar {
+  background: var(--skill-bar-bg);
+  border-radius: 10px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  height: 12px;
+}
+
+.skill-bar-fill {
+  height: 100%;
+  width: 0%;
+  background: var(--skill-bar-fill);
+  border-radius: 10px;
+  animation: fillBar 2s forwards;
+}
+
+@keyframes fillBar {
+  0% { width: 0%; }
+  100% { width: 80%; } /* example fill percentage */
 }
 
 /* ==============================
@@ -230,7 +259,7 @@ section {
 }
 
 /* ==============================
-   Portfolio / Projects
+   Projects Section
 ============================== */
 .projects-grid {
   display: flex;
@@ -273,6 +302,25 @@ section {
 }
 
 /* ==============================
+   Testimonials Section
+============================== */
+.testimonials-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.testimonial-card {
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 15px;
+  width: 280px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  font-style: italic;
+}
+
+/* ==============================
    Contact Section
 ============================== */
 .contact-form {
@@ -303,38 +351,42 @@ section {
   font-size: 0.9rem;
 }
 
-.contact-info a {
-  color: var(--primary);
-}
-
 .footer-caption {
-  margin-top: 15px;
-  font-size: 0.85rem;
+  margin-top: 10px;
+  font-size: 0.8rem;
   color: var(--text-muted);
 }
 
 /* ==============================
-   Animations
+   Footer
 ============================== */
-@keyframes fadeInUp {
-  0% { opacity: 0; transform: translateY(20px); }
-  100% { opacity: 1; transform: translateY(0); }
+footer {
+  text-align: center;
+  padding: 20px;
+  background: var(--card-bg);
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-top: 40px;
 }
 
 /* ==============================
    Responsive
 ============================== */
 @media (max-width: 768px) {
-  .about-container,
-  .services-grid,
-  .projects-grid {
+  .about-container, .services-grid, .projects-grid, .testimonials-grid {
     flex-direction: column;
-    gap: 20px;
     align-items: center;
   }
+  
+  #hero h1 {
+    font-size: 2rem;
+  }
 
-  #hero h1 { font-size: 2.2rem; }
-  #hero .tagline { font-size: 1rem; }
-  .team-card, .service-card, .project-card { width: 90%; }
-  .contact-form { max-width: 100%; }
+  #hero .tagline {
+    font-size: 1rem;
+  }
+
+  .team-card, .service-card, .project-card, .testimonial-card {
+    width: 90%;
+  }
 }
