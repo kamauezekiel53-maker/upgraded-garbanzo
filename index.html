@@ -3,143 +3,145 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio Website</title>
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <title>Ezekiel & Deogracious Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- HERO SECTION -->
-  <header id="hero" role="banner">
-    <div class="hero-container">
-      <div class="hero-left">
-        <div class="logo">MyLogo</div>
-        <nav>
-          <ul>
-            <li><a href="#projects">Portfolio</a></li>
-            <li><a href="#contact">Check Links</a></li>
-            <li><a href="#search">Search</a></li>
-          </ul>
-        </nav>
-      </div>
-      <div class="hero-center">
-        <h1>PORTFOLIO WEBSITE</h1>
-        <p class="tagline">Crafting clean, creative, and connected digital experiences.</p>
-      </div>
-      <div class="hero-right">
-        <a href="#contact" class="btn">Contact Me</a>
-        <a href="#projects" class="btn">Check Links</a>
-      </div>
-    </div>
-    <div class="hero-mobile-preview">
-      <img src="https://via.placeholder.com/150x300" alt="Mobile Preview">
-    </div>
-    <small class="hero-caption">Wait for end</small>
-  </header>
 
-  <!-- FEATURED PROJECTS -->
+  <!-- ==================== HERO SECTION ==================== -->
+  <section id="hero">
+    <div class="hero-bg"></div> <!-- particle effect background -->
+    <div class="hero-container">
+      <h1>Ezekiel Kamau & Deogracious</h1>
+      <p class="tagline">Web & App Developers | Crafting modern, scalable, and interactive experiences.</p>
+      <a href="#projects" class="btn">See Our Work</a>
+    </div>
+  </section>
+
+  <!-- ==================== ABOUT SECTION ==================== -->
+  <section id="about">
+    <h2>About Us</h2>
+    <div class="about-container">
+      <!-- Ezekiel -->
+      <div class="team-card">
+        <img src="https://i.postimg.cc/XqgqfWXk/IMG-20251103-WA0000.jpg" alt="Ezekiel Photo" class="team-photo">
+        <h3>Ezekiel Kamau</h3>
+        <p>Full-stack developer passionate about building scalable web applications with modern UI and clean code.</p>
+        <p>Fun Fact: Loves exploring new JavaScript frameworks!</p>
+        <ul class="skills">
+          <li>HTML & CSS</li>
+          <li>JavaScript</li>
+          <li>React JS</li>
+          <li>Node JS</li>
+          <li>MongoDB</li>
+        </ul>
+        <ul class="team-contact">
+          <li>📞 +254 752 578163</li>
+          <li>📧 kamauezekiel53@gmail.com</li>
+          <li>💻 <a href="https://github.com/kamauezekiel53-maker" target="_blank">GitHub</a></li>
+          <li>📸 <a href="https://www.instagram.com/_it_s_echelon?igsh=MW4yd2E3cGR1bTd2dQ==" target="_blank">Instagram</a></li>
+        </ul>
+      </div>
+
+      <!-- Deogracious -->
+      <div class="team-card">
+        <img src="https://i.postimg.cc/CLNnDGqd/IMG-20251103-WA0001.jpg" alt="Deogracious Photo" class="team-photo">
+        <h3>Deogracious</h3>
+        <p>UI/UX designer creating intuitive interfaces and smooth user experiences that connect users to products.</p>
+        <p>Fun Fact: Enjoys designing interactive portfolio animations!</p>
+        <ul class="skills">
+          <li>UI/UX Design</li>
+          <li>Figma</li>
+          <li>Adobe XD</li>
+          <li>Illustrator</li>
+          <li>Photoshop</li>
+        </ul>
+        <ul class="team-contact">
+          <li>📞 +254 714 787917</li>
+          <li>📧 alvindeo03@gmail.com</li>
+          <li>💻 <a href="https://github.com/deo-afk" target="_blank">GitHub</a></li>
+          <li>📸 <a href="https://www.instagram.com/rry_deo.nav?igsh=MXRxcGt6ZGdhenh5bg==" target="_blank">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SERVICES ==================== -->
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <h3>Web Development</h3>
+        <p>Building fast, responsive, and modern web applications using the latest technologies.</p>
+      </div>
+      <div class="service-card">
+        <h3>UI/UX Design</h3>
+        <p>Designing intuitive interfaces and user experiences that delight users.</p>
+      </div>
+      <div class="service-card">
+        <h3>Portfolio & Branding</h3>
+        <p>Showcasing your projects and services professionally with interactive portfolios.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PORTFOLIO / PROJECTS ==================== -->
   <section id="projects">
-    <h2>Featured Projects</h2>
+    <h2>Our Projects</h2>
     <div class="projects-grid">
-      <article class="project-card">
-        <img src="https://via.placeholder.com/300x200" alt="Project 1">
+      <div class="project-card">
+        <img src="https://via.placeholder.com/300x150" alt="Project 1">
         <h3>Project One</h3>
-        <p>Short description of the project.</p>
+        <p>Responsive website built with HTML, CSS, and React JS.</p>
         <div class="tech-tags">
           <span>HTML</span><span>CSS</span><span>React</span>
         </div>
-        <a href="#" class="btn">View Project</a>
-      </article>
-      <article class="project-card">
-        <img src="https://via.placeholder.com/300x200" alt="Project 2">
+        <a href="#" class="btn">Live Demo</a>
+      </div>
+      <div class="project-card">
+        <img src="https://via.placeholder.com/300x150" alt="Project 2">
         <h3>Project Two</h3>
-        <p>Short description of the project.</p>
+        <p>Full-stack application using Node.js and MongoDB.</p>
         <div class="tech-tags">
-          <span>NodeJS</span><span>Express</span><span>MongoDB</span>
+          <span>Node.js</span><span>MongoDB</span><span>Express</span>
         </div>
-        <a href="#" class="btn">View Project</a>
-      </article>
-      <article class="project-card">
-        <img src="https://via.placeholder.com/300x200" alt="Project 3">
+        <a href="#" class="btn">View Code</a>
+      </div>
+      <div class="project-card">
+        <img src="https://via.placeholder.com/300x150" alt="Project 3">
         <h3>Project Three</h3>
-        <p>Short description of the project.</p>
+        <p>Interactive portfolio showcasing design and development skills.</p>
         <div class="tech-tags">
-          <span>Firebase</span><span>JS</span><span>CSS</span>
+          <span>HTML</span><span>CSS</span><span>JavaScript</span>
         </div>
-        <a href="#" class="btn">View Project</a>
-      </article>
-    </div>
-  </section>
-
-  <!-- SKILLS GRID -->
-  <section id="skills">
-    <h2>My Skills</h2>
-    <div class="skills-grid">
-      <div class="skill-tile">HTML & CSS</div>
-      <div class="skill-tile">JavaScript</div>
-      <div class="skill-tile">React JS</div>
-      <div class="skill-tile">Node JS</div>
-      <div class="skill-tile">Express JS</div>
-      <div class="skill-tile">MongoDB</div>
-      <div class="skill-tile">Firebase</div>
-      <div class="skill-tile">Python</div>
-      <div class="skill-tile">Git & GitHub</div>
-    </div>
-  </section>
-
-  <!-- TEAM / CONTACT SECTION -->
-  <section id="team">
-    <h2>Meet the Developers</h2>
-    <div class="team-container">
-      
-      <!-- Ezekiel Card -->
-      <article class="team-card">
-        <img src="https://i.ibb.co/PGMg6tHt" alt="Ezekiel Kamau" class="team-photo">
-        <h3>Ezekiel Kamau</h3>
-        <p>A passionate front-end developer specializing in clean, modern, and responsive web design. Skilled in HTML, CSS, JavaScript, and React, Ezekiel loves turning ideas into interactive digital experiences.</p>
-        <ul class="team-contact">
-          <li>📞 +254 752 578163</li>
-          <li>✉️ <a href="mailto:kamauezekiel53@gmail.com">kamauezekiel53@gmail.com</a></li>
-          <li>🌐 <a href="https://github.com/kamauezekiel53-maker" target="_blank">GitHub</a> | 
-              <a href="https://www.instagram.com/_it_s_echelon?igsh=MW4yd2E3cGR1bTd2dQ==" target="_blank">Instagram</a>
-          </li>
-        </ul>
-      </article>
-      
-      <!-- Deogracious Card -->
-      <article class="team-card">
-        <img src="https://i.ibb.co/0HxS5mt" alt="Deogracious Alvin" class="team-photo">
-        <h3>Deogracious Alvin</h3>
-        <p>A versatile full-stack developer with expertise in Node.js, Express, MongoDB, and Python. Deogracious builds efficient, scalable applications and enjoys crafting elegant backend solutions.</p>
-        <ul class="team-contact">
-          <li>📞 +254 714 787917</li>
-          <li>✉️ <a href="mailto:alvindeo03@gmail.com">alvindeo03@gmail.com</a></li>
-          <li>🌐 <a href="https://github.com/deo-afk" target="_blank">GitHub</a> | 
-              <a href="https://www.instagram.com/rry_deo.nav?igsh=MXRxcGt6ZGdhenh5bg==" target="_blank">Instagram</a>
-          </li>
-        </ul>
-      </article>
-
-    </div>
-  </section>
-
-  <!-- RESPONSIVE MOCKUP SECTION -->
-  <section id="preview">
-    <h2>Responsive Design Demo</h2>
-    <div class="preview-container">
-      <div class="desktop-mockup">
-        <img src="https://via.placeholder.com/400x300" alt="Desktop Preview">
-      </div>
-      <div class="mobile-mockup">
-        <img src="https://via.placeholder.com/150x300" alt="Mobile Preview">
+        <a href="#" class="btn">Live Demo</a>
       </div>
     </div>
-    <p class="preview-caption">Wait for end</p>
   </section>
 
-  <!-- FOOTER -->
+  <!-- ==================== CONTACT ==================== -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit" class="btn">Work With Us</button>
+    </form>
+
+    <div class="contact-info">
+      <p>Phone: +254 752 578163 | +254 714 787917</p>
+      <p>Email: kamauezekiel53@gmail.com | alvindeo03@gmail.com</p>
+      <p>GitHub: <a href="https://github.com/kamauezekiel53-maker" target="_blank">Ezekiel</a> | <a href="https://github.com/deo-afk" target="_blank">Deogracious</a></p>
+      <p>Instagram: <a href="https://www.instagram.com/_it_s_echelon?igsh=MW4yd2E3cGR1bTd2dQ==" target="_blank">Ezekiel</a> | <a href="https://www.instagram.com/rry_deo.nav?igsh=MXRxcGt6ZGdhenh5bg==" target="_blank">Deogracious</a></p>
+    </div>
+    <div class="footer-caption">Let's Connect — @CodeZenithAI</div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
   <footer>
-    <p>Built with ❤️ by Ezekiel Kamau & Deogracious Alvin</p>
+    <p>© 2025 Built with ❤️ by Ezekiel & Deogracious</p>
   </footer>
 
 </body>
